@@ -1,0 +1,27 @@
+@SecureFlight.Api_HostAddress = http://localhost:5088
+
+GET {{SecureFlight.Api_HostAddress}}/Airports/
+Accept: application/json
+###
+PUT {{SecureFlight.Api_HostAddress}}/Airports/JFK
+Content-Type: application/json
+Accept: application/json
+
+{
+  "code": "JFK",
+  "name": "John F Kennedy International",
+  "city": "New York",
+  "country": "USA"
+}
+
+###
+GET {{SecureFlight.Api_HostAddress}}/Flights/
+Accept: application/json
+
+###
+GET {{SecureFlight.Api_HostAddress}}/Passengers
+Accept: application/json
+
+###
+GET {{SecureFlight.Api_HostAddress}}/Flights/1/Passengers
+Accept: application/json
