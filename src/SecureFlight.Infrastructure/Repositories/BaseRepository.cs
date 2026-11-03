@@ -22,6 +22,12 @@ public class BaseRepository<TEntity>(SecureFlightDbContext context)
         return await context.Set<TEntity>().AsNoTracking().Where(predicate).ToListAsync();
     }
 
+    public async Task<TEntity> AddAsync(TEntity entity)
+    {
+        await context.Set<TEntity>().AddAsync(entity);
+        return entity;
+    }
+
     public TEntity Update(TEntity entity)
     {
         var entry = context.Entry(entity);

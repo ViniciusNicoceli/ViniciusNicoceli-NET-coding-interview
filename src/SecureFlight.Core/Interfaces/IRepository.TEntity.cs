@@ -12,6 +12,8 @@ public interface IRepository<TEntity>
 
     Task<IReadOnlyList<TEntity>> FilterAsync(Expression<Func<TEntity, bool>> predicate);
 
+    Task<TEntity> AddAsync(TEntity entity);
+
     TEntity Update(TEntity entity);
 
     Task<TEntity> GetByIdAsync(params object[] keyValues);

@@ -22,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\SecureFlight.Api\SecureFlight.Api.csproj" />
     <ProjectReference Include="..\..\src\SecureFlight.Infrastructure\SecureFlight.Infrastructure.csproj" />
   </ItemGroup>
 
